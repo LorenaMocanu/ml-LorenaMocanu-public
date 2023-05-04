@@ -5,11 +5,12 @@
     <title>Descubriendo Gran Canaria</title>
     <style>
         body {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.473);
             margin: 0;
             padding: 0;
             padding-top: 50px;
             padding-bottom: 50px;
+            font-family: Arial, sans-serif;
         }
 
         h1 {
@@ -32,7 +33,16 @@
             padding: 10px 20px;
             transition: color 0.2s, background-color 0.2s;
         }
-
+        .madalin{
+            background-color: #d7a9f1;
+            border-radius: 10%;
+            transition: 1s all;
+        }
+        .madalin:hover{
+            color: white;
+            background-color: black;
+            border-radius: 10%;
+        }
         button:hover {
             color: white;
             background-color: black;
@@ -53,18 +63,22 @@
         }
 
         .form-container {
-            width: 600px;
+            width: 1800px;
             margin: 0 auto;
             text-align: center;
         }
-
+        .test4{
+        width:  100%;
+        height: 40px;
+        text-align: center;
+    }
         form {
             width: 50%;
             margin: 0 auto;
             background-color: #f2f2f2;
-            border-radius: 5px;
+            border-radius: 10px;
             padding: 20px;
-            text-align: left;
+            text-align: center;
             font-family: 'Times New Roman', Times, serif, sans-serif;
             font-size: 16px;
         }
@@ -131,7 +145,7 @@
         </div>
         <div>
             <label for="text">Municipio donde se encuentra</label>
-            <select id="text" name="text" >
+            <select class="test4" name="municipio" id="municipio">
                 <option value=""></option>
                 <option value="Agaete">Agaete</option>
                 <option value="Agüimes">Agüimes</option>
@@ -158,18 +172,18 @@
         </div>
         <div>
             <label for="text">URL con mas informacion:</label>
-            <input id="text" name="text" required>
+            <input type="text" id="name" name="name" required>
         </div>
         <div>
             <label for="text">URL con enlace A Google Maps</label>
-            <input id="text" name="text" required>
+            <input type="text" id="name" name="name" required>
         </div>
         <div>
             <label for="text">Imagen:</label>
-            <input id="text" name="text" required>
+            <input class="test22" id="input-file" type="file" accept="image/*">
         </div>
         <div>
-            <button type="Enviar">Enviar</button>
+            <button class="madalin" type="Enviar">Enviar</button>
         </div>
     </form>
 </div>
