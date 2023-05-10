@@ -27,6 +27,14 @@ if(isset($_FILES['imagine'])) {
   move_uploaded_file($tmp_imagine, $folder.$nume_imagine);
 }
 
+// construirea unei linii de date pentru fisierul CSV
+$linie = $namePlace . ';' . $descriptionPlace . ';' . $municipioText . ';' . $informationUrl . ';' . $infoGoogle . ';' . $nume_imagine . "\n";
+
+// deschidere fisier si scriere linie de date
+$fisier_csv = 'date.csv';
+$handle = fopen($fisier_csv, 'a');
+fwrite($handle, $linie);
+fclose($handle);
 
 if ($namePlace == "") {
     $arrayErrors[] = "<li>ERROR: The name field is empty";
