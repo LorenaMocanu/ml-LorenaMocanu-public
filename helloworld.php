@@ -37,7 +37,7 @@ fwrite($handle, $linie);
 fclose($handle);
 
 if ($namePlace == "") {
-    $arrayErrors[] = "<li>ERROR: The name field is empt";
+    $arrayErrors[] = "<li>ERROR: The name field is empty";
 }
 if ($descriptionPlace == "") {
     $arrayErrors[] = "<li>ERROR: The description field is empty";
