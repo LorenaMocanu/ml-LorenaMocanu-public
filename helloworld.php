@@ -49,6 +49,9 @@ if (strlen($informationUrl) > 100) {
 if (strlen($infoGoogle) > 100) {
     $arrayErrors[] = "<li>ERROR: The size of the URL (Google Maps) field greater than 100 characters";
 }
+if (strlen($image) > 100) {
+  $arrayErrors[] = "<li>ERROR: The size of the URL (Google Maps) field greater than 100 characters";
+}
 
 
 
