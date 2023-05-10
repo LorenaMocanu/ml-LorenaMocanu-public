@@ -85,6 +85,7 @@ else
     echo "<li>The description of the place is...$descriptionPlace";
     echo "<li>The URL with info of the place is...$informationUrl";
     echo "<li>The URL with the map of the place is...$infoGoogle";
+    echo "<li>Datele au fost salvate în fișierul " . $fisier_csv;
     if(isset($nume_imagine)) {
       echo "<p><img src='imagini/$nume_imagine'></p>";
     }
