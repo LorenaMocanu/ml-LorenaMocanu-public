@@ -15,7 +15,7 @@ $descriptionPlace = $_POST["descriere"];
 $municipioText = $_POST["municipio"];
 $informationUrl = $_POST["url"];
 $infoGoogle = $_POST["gurl"];
-$image = $_POST["input-file"];
+$image = $_FILES["input-file"];
 
 // Validamos los datos
 if ($namePlace == "") {
