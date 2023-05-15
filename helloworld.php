@@ -10,6 +10,17 @@
 
 
 <?php
+
+// DEGUB CODE
+/*
+echo "<pre>";
+echo "<h1>Contenido del array _POST</h1>";
+print_r($_POST);
+echo "<h1>Contenido del array _FILES</h1>";
+print_r($_FILES);
+echo "</pre>";
+^*/
+
 $arrayErrors = array();
 
 $namePlace = $_POST["number"];
