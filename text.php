@@ -1,7 +1,7 @@
 <?php
 
 // Open the file. Read mode
-$file = fopen("places.csv", "r"); 
+$file = fopen("date.csv", "r"); 
 
 // New array. One position - One file line
 $places = array();

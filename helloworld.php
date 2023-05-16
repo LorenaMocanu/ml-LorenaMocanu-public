@@ -1,12 +1,19 @@
-</body>
-</html>
 
 <html>
 
 <body>
+<header>
+		<h1>Descubriendo Gran Canaria</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="formula.html">Nuevo lugar que visitar</a></li>
+			<li><a href="tabel.php">Lugares que no me puedo perder</a></li>
+		</ul>
+	</nav>
+    <main>
+        <h1>Receiving data from the form</h1>
 
-
-<h1>Receiving data from the form</h1>
 
 
 <?php
@@ -39,7 +46,7 @@ if(isset($_FILES['imagine'])) {
 }
 
 // construirea unei linii de date pentru fisierul CSV
-$linie = $namePlace . ';' . $descriptionPlace . ';' . $municipioText . ';' . $informationUrl . ';' . $infoGoogle . ';' . $nume_imagine . "\n";
+$linie = "\n" . $namePlace . ';' . $descriptionPlace . ';' . $municipioText . ';' . $informationUrl . ';' . $infoGoogle . ';' . $nume_imagine;
 
 // deschidere fisier si scriere linie de date
 $fisier_csv = 'date.csv';
