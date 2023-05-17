@@ -18,6 +18,30 @@
 
 <?php
 
+// Funcție pentru a verifica dacă o variabilă are informații
+function validateRequired($value) {
+    return !empty($value);
+}
+
+// Funcție pentru a verifica dacă conținutul unei variabile nu depășește o anumită dimensiune
+function validateSize($value, $size) {
+    return strlen($value) <= $size;
+}
+
+// Funcție pentru a verifica dacă o variabilă conține o URL validă
+function validateURL($value) {
+    return preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $value);
+}
+
+$file = fopen("date.csv", "r");
+$data = array();
+
+while (!feof($file)) {
+    $data[] = explode(";", fgets($file));
+}
+
+fclose($file);
+
 // DEGUB CODE
 /*
 echo "<pre>";

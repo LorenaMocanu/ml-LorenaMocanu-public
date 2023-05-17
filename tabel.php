@@ -1,18 +1,4 @@
 <?php
-// Funcție pentru a verifica dacă o variabilă are informații
-function validateRequired($value) {
-    return !empty($value);
-}
-
-// Funcție pentru a verifica dacă conținutul unei variabile nu depășește o anumită dimensiune
-function validateSize($value, $size) {
-    return strlen($value) <= $size;
-}
-
-// Funcție pentru a verifica dacă o variabilă conține o URL validă
-function validateURL($value) {
-    return preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i", $value);
-}
 
 $file = fopen("date.csv", "r");
 $data = array();
@@ -47,7 +33,7 @@ fclose($file);
     <table>
       <thead>
         <tr>
-          <th>Visitado</th>
+          
           <th>Nombre del lugar</th>
           <th>Description</th>
           <th>Municipio</th>
@@ -62,7 +48,6 @@ fclose($file);
         foreach ($data as $place) {
           
           echo "<tr>";
-          echo "<td><input type='checkbox' checked='checked'></td>";
           echo "<td>$place[0]</td>";
           echo "<td>$place[1]</td>";
           echo "<td>$place[2]</td>";
